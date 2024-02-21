@@ -1,0 +1,216 @@
+3)
+create a new repo
+copy
+create new folder
+clone 
+cd tab
+
+a) git branch
+git branch -c feature-branch
+git branch
+git push origin feature-branch
+
+
+create a new file in the main branch in github 
+change main ->feature branch craete a file 
+commit in the terminal
+
+b)
+git checkout main
+git fetch
+git rebase origin/feature-branch
+git pull origin main
+git push origin main
+git checkout main
+
+c)git merge feature-branch -m "merge feature branch into main"
+git push origin main
+
+
+-------------------------------------------------------------------------------------------------
+
+1	Setting Up and Basic Commands
+Initialize a new Git repository in a directory. Create a new file and add it to the staging area and commit the changes with an appropriate commit message.
+2	Creating and Managing Branches
+a)	Create a new branch named "feature-branch." Switch to the "master" branch. Merge the "feature-branch" into "master."
+b)	Write the commands to stash your changes, switch branches, and then apply the stashed changes.
+3	Collaboration and Remote Repositories
+a)	Clone a remote Git repository to your local machine.
+b)	Fetch the latest changes from a remote repository and rebase your local branch onto the updated remote branch.
+c)	Write the command to merge "feature-branch" into "master" while providing a custom commit message for the merge.
+4	Git Tags and Releases
+Write the command to create a lightweight Git tag named "v1.0" for a commit in your local repository.
+5	Advanced Git Operations
+Write the command to cherry-pick a range of commits from "source-branch" to the current branch.
+6	Analysing and Changing Git History
+a)	Given a commit ID, how would you use Git to view the details of that specific commit, including the author, date, and commit message?
+b)	Write the command to list all commits made by the author "JohnDoe" between "2023-01-01" and "2023-12-31."
+c)	Write the command to display the last five commits in the repository's history.
+d)	Write the command to undo the changes introduced by the commit with the ID "abc123".
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6. first create a file named a.txt
+   git add a.txt
+   git commit -m "first-commit"
+   git push origin main
+   
+   create a file named b.txt
+   git add b.txt
+   git commit -m "second"
+   git push origin main
+
+   create a file named c.txt
+   git add c.txt
+   git commit -m "third"
+   git push origin main
+
+   5 times 
+
+   git log
+   git show  0a11312eab11457aa6b717aa493952fd8661230d  
+   git log --author="NisargaRamesh" --since="2024-02-19" --until="2024-02-20"
+   git log -n 2
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.  first create a file named a.txt
+   git add .
+   git commit -m "first-commit"
+   git pull
+   git push origin main
+   
+   git branch
+   git checkout -b source-branch   #Switched to a new branch 'source-branch'
+   git branch                      #main
+                                    * source-branch
+
+   
+  git add .
+  git add .
+  git commit -m "file b"
+  git push origin source_branch
+  git branch
+  git add.
+  git commit -m "file c"
+  git push origin source_branch
+  git branch
+  git checkout main
+   git branch
+  git cherry-pick source-branch~2..source_branch
+  git cherry-pick source_branch~2..source_branch
+  git branch
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1) 1	Setting Up and Basic Commands
+Initialize a new Git repository in a directory. Create a new file and add it to the staging area and commit the changes with an appropriate commit message.
+
+create a repositary
+copy the url
+create a folder
+clone the repo
+cd tab
+create a file in github 
+commit and push the changes
+craete a file in local repo
+git add .
+git commit -m "fc"
+git push
+
+2)	Creating and Managing Branches
+a)	Create a new branch named "feature-branch." Switch to the "master" branch. Merge the "feature-branch" into "master."
+b)	Write the commands to stash your changes, switch branches, and then apply the stashed changes.
+
+create a repositary
+copy the url
+create a folder
+clone the repo
+cd tab
+create a file in github 
+commit and push the changes
+craete a file in local repo
+git add .
+git commit -m "fc"
+git push
+
+a) git checkout -b feature-branch
+git checkout -b master
+git merge feature-branch
+                                                                                                                                                                                                               b)  git stash save "Your stash message"                                                                                                                                                                                         git checkout another-branch                     
+git branch
+
+3)  Collaboration and Remote Repositories
+a)	Clone a remote Git repository to your local machine.
+b)	Fetch the latest changes from a remote repository and rebase your local branch onto the updated remote branch.
+c)	Write the command to merge "feature-branch" into "master" while providing a custom commit message for the merge.
+
+create a new repo
+copy
+create new folder
+clone 
+cd tab
+
+a) git branch
+git branch -c feature-branch
+git branch
+git push origin feature-branch
+
+
+create a new file in the main branch in github 
+change main ->feature branch craete a file 
+commit in the terminal
+
+b)
+git checkout main
+git fetch
+git rebase origin/feature-branch
+git pull origin main
+git push origin main
+git checkout main
+
+c)git merge feature-branch -m "merge feature branch into main"
+git push origin main
+
+
+4) Git Tags and Releases
+Write the command to create a lightweight Git tag named "v1.0" for a commit in your local repository.
+
+create a file add, coomit,push
+create another file add, commit push
+git tag v1.0
+git tag
+git push origin v1.0
+create another file add commit,push
+git checkout -b version1 v1.0
+git push origin version1
+
+5) Advanced Git Operations
+Write the command to cherry-pick a range of commits from "source-branch" to the current branch.
+Procedure:
+create and commit a file in main branch
+craete a source-branch and commit two files in it
+change source to main i.e
+git checkout main
+git branch
+git cherry-pick source_branch~2..source_branch
+git log
+git push origin main
+
+
+6)Analysing and Changing Git History
+a)	Given a commit ID, how would you use Git to view the details of that specific commit, including the author, date, and commit message?
+b)	Write the command to list all commits made by the author "JohnDoe" between "2023-01-01" and "2023-12-31."
+c)	Write the command to display the last five commits in the repository's history.
+d)	Write the command to undo the changes introduced by the commit with the ID "abc123".
+
+
+create 5 files add, commit,push one by one
+a) git log
+   git show <commit_id>
+
+b)git log --author="POOJASHREE" --since="2024-02-20" --until="2024-02-21"
+
+c)git log -n 3
+
+d)git revert <commitid> -n
